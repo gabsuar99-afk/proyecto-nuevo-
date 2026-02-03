@@ -1,46 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <nav>
+  <meta charset="UTF-8">
+  <title>Club Unión Itateña</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<nav>
   <ul>
     <li><a href="#">Inicio</a></li>
-    <li><a href="#">Noticias</a></li>
-    <li><a href="#historia">Historia</a>
-</li>
+    <li><a href="#noticias">Noticias</a></li>
+    <li><a href="#historia">Historia</a></li>
+    <li><a href="#festival">Festival</a></li>
     <li><a href="#">Contacto</a></li>
   </ul>
 </nav>
 
-  <meta charset="UTF-8">
-  <title>Mi Blog</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
 <header>
   <div class="escudo">
-    <div class="escudo-placeholder">ESCUDO</div>
+    <img src="imagenes/img.escudo.png" alt="Escudo Club Unión Itateña">
   </div>
 
-
   <h1>Club Unión Itateña</h1>
-  <p>donde la pasion y el deporte se encuentran</p>
+  <p>donde la pasión y el deporte se encuentran</p>
 </header>
 
- <article>
-      <h2>Bienvenidos al club Union Itateña</h2>
-      <p>Este es el sitio oficial donde compartiremos noticias, eventos y toda la informacion del club</p>
-    </article>
-  </main>
+<main>
 
-  <footer>
-    <p>© 2026</p>
-  </footer>
+<article>
+  <h2>Bienvenidos al club Unión Itateña</h2>
+  <p>
+    Este es el sitio oficial donde compartiremos noticias,
+    eventos y toda la información del club.
+  </p>
+</article>
 
-
-  <main>
-    <section id="historia" class="historia">
->
+<section id="historia" class="historia">
   <h2>Historia del Club</h2>
   <p>
     Próximamente compartiremos la historia del Club Unión Itateña,
@@ -48,9 +45,6 @@
   </p>
 </section>
 
-
-</body>
-</html>
 <section id="galeria">
   <h2>Galería</h2>
 
@@ -60,6 +54,7 @@
     <img src="imagenes/foto3.jpg" alt="Imagen del club">
   </div>
 </section>
+
 <section id="noticias">
   <h2>Noticias</h2>
 
@@ -81,17 +76,51 @@
     </p>
   </article>
 </section>
-<section id="festival">
+
+<section id="festival" class="festival">
   <h2>Festival del Amor y la Amistad</h2>
-
+  
   <p>
-    El Club Unión Itateña es organizador del tradicional
-    <strong>Festival Anual del Amor y la Amistad</strong>,
-    un evento que reúne a la comunidad con música, cultura y celebración.
+    Nuestro club organiza cada año el tradicional Festival del Amor y la Amistad,
+    un evento especial para compartir en familia, con música, baile, comidas típicas
+    y muchas sorpresas.
   </p>
 
-  <p>
-    Año tras año, este festival se convirtió en una tradición
-    que fortalece los lazos entre vecinos y visitantes.
-  </p>
+  <p class="fecha">📅 14 de Febrero</p>
+
+  <div id="countdown"></div>
 </section>
+
+</main>
+
+<footer>
+  <p>© 2026 Club Unión Itateña</p>
+</footer>
+
+<!-- ✅ JavaScript incorporado -->
+<script>
+  const festivalDate = new Date("Feb 14, 2026 00:00:00").getTime();
+
+  setInterval(function () {
+
+    const now = new Date().getTime();
+    const distance = festivalDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("countdown").innerHTML =
+      "Faltan " + days + " días " + hours + " hs " + minutes + " min " + seconds + " seg";
+
+    if (distance < 0) {
+      document.getElementById("countdown").innerHTML = "¡El festival ya comenzó!";
+    }
+
+  }, 1000);
+</script>
+
+</body>
+</html>
+

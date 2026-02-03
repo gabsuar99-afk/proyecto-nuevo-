@@ -174,3 +174,53 @@ header p {
   text-align: center;
   margin-bottom: 10px;
 }
+.escudo img {
+  width: 130px;        /* Tamaño del escudo */
+  height: auto;        /* Mantiene la proporción */
+  border-radius: 10px; /* Bordes un poquito redondeados */
+  display: block;      /* Ayuda a que se comporte bien en el centro */
+  margin: 0 auto;      /* Centrado horizontal */
+}
+.festival {
+  background-color: #ffe4e1;
+  padding: 40px;
+  text-align: center;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+.festival h2 {
+  color: #b22222;
+  font-size: 28px;
+}
+
+.festival p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.fecha {
+  font-weight: bold;
+  font-size: 22px;
+  color: #8b0000;
+}
+#countdown {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #b22222;
+}
+.festival {
+  background-color: #ffe4e1;
+  padding: 40px;
+  text-align: center;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+#countdown {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #b22222;
+}
